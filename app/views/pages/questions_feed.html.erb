@@ -4,8 +4,10 @@
 	</div>
 	<div class="col-md-6">
 		<% @questions.each do |question| %>
-			<p><%= question.title %></p>
+			<h3><%= question.title %></h3>
+			<small>Asked <%= time_ago_in_words(question.created_at) %> ago by <%= question.user.full_name %>.</small>
 			<p><%= question.body %></p>
+			<hr>
 		<% end %>
 	</div>
 	<div class="col-md-3">
