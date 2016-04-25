@@ -1,6 +1,11 @@
 <div class="row">
 	<div class="col-md-3">
-		<p>Feed options</p>
+		<p>Knowledge Base</p>
+		<ul>
+			<% @categories.each do |category| %>
+				<li><%= link_to "#{category.name}", category %>
+			<% end %>
+		</ul>
 	</div>
 	<div class="col-md-6">
 		<% @questions.each do |question| %>
