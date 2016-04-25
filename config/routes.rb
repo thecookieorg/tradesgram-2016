@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :categories
+  resources :articles
   get 'pages/questions_feed'
 
   resources :questions
