@@ -4,6 +4,6 @@ class PagesController < ApplicationController
   end
 
   def questions_feed
-  	@questions = Question.all
+  	@questions = Question.all.order(created_at: :desc)
   end
 end

@@ -1,4 +1,15 @@
-<% @questions.each do |question| %>
-	<p><%= question.title %></p>
-	<p><%= question.body %></p>
-<% end %>
+<div class="row">
+	<div class="col-md-3">
+		<p>Feed options</p>
+	</div>
+	<div class="col-md-6">
+		<% @questions.each do |question| %>
+			<p><%= question.title %></p>
+			<p><%= question.body %></p>
+		<% end %>
+	</div>
+	<div class="col-md-3">
+		<p>Update your profile</p>
+	</div>
+</div>		
+
